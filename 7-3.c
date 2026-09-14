@@ -8,7 +8,7 @@ int main()
     scanf("%d",&i);
     a = i/100;
     b = i/10%10;
-    c = i%100;
+    c = i%100%10;
     d = c*100 + b*10 + a;
 
     printf("%d",d);
