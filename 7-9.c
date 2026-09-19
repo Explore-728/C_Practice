@@ -8,11 +8,11 @@ int main()
     scanf("%d %d %d",&a,&b,&c);
 
     if(a == b){
-        printf("%d",c);
+        printf("C");
     }else if(a == c){
-        printf("%d",b);
+        printf("B");
     }else if(b == c){
-        printf("%d",a);
+        printf("A");
     }
 
     system("pause");
