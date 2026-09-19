@@ -7,9 +7,9 @@ int main()
     scanf("%d:%d",&a,&b);
 
     if( a < 12){
-        printf("%d:%dAM",a,b);
+        printf("%02d:%02d AM",a,b);
     }else{
-        printf("%d:%dPM",a - 12,b);
+        printf("%02d:%02d PM",a - 12,b);
     }
     system("pause");
     return 0;
