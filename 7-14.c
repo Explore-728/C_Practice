@@ -15,9 +15,14 @@ int main()
         sum += i;
         if(n%5 == 0){
             printf("\n");
-        }
+        }    
     }
-    printf("\nSum = %d",sum);
+
+    if(n%5 != 0){
+        printf("\n");
+    }
+
+    printf("Sum = %d",sum);
 
     system("pause");
 
