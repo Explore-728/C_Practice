@@ -4,7 +4,7 @@
 int main()
 {
     int N,U,D;
-    int i,count = 0;
+    int count = 0;
     int total = 0;
     scanf("%d %d %d",&N,&U,&D);
 
