@@ -29,8 +29,10 @@ int main()
             }
         }
         printf("%.2lf",(a+b)/2);
-    }else if(out(a)==0 && out(b)==0){
-        printf("%.2lf",(a+b)/2);
+    }else if(out(a)==0){
+        printf("%.2lf",a);
+    }else if(out(b)==0){
+        printf("%.2lf",b);
     }
 
     system("pause");
