@@ -1,9 +1,8 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 double a3,a2,a1,a0;
 
-double out(double i)
+double f(double i)
 {
     return a3*i*i*i + a2*i*i + a1*i + a0;
 }
@@ -15,26 +14,22 @@ int main()
     double a,b;
     scanf("%lf %lf",&a,&b);
 
-    if(b - a < 0.01){
-        printf("%.2lf",(a+b)/2);
-        return 0;
-    }
+    while(b-a>=0.01){
+        double mid = (a + b)/2;
 
-    if(out(a)*out(b)<0){
-        while(b - a >= 0.01){
-            if(out((a+b)/2)*out(a)>0){
-                a = (a+b)/2;
-            }else{
-                b = (a+b)/2;
-            }
+        if(f(mid) == 0){
+            break;
         }
-        printf("%.2lf",(a+b)/2);
-    }else if(out(a)==0){
-        printf("%.2lf",a);
-    }else if(out(b)==0){
-        printf("%.2lf",b);
+
+        if(f(mid) * f(a) > 0){
+            a = mid;
+        }else{
+            b = mid;
+        }
+
     }
 
-    system("pause");
+    printf("%.2lf",(a+b)/2);
+
     return 0;
 }
