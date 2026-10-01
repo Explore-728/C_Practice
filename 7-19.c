@@ -6,12 +6,25 @@ int main()
     int n;
     scanf("%d",&n);
 
-    double y,f;
+    int y,f;
 
-    y = (98-n) / 3;
-    f = (2 * (98 - n)) / 3 + 1;
+    int found = 0;
+    for(y = 0; y < 100;y++){
+        for(f = 0; f < 100;f++){
+            if(98*f - 199*y == n){
+                printf("%d.%d",y,f);
+                found = 1;
+                break;
+            }
+        }
+        if(found){
+            break;
+        }
+    }
 
-    printf("%.2lf",y + 0.01 * f);
+    if(!found){
+        printf("No Solution");
+    }
 
     system("pause");
     return 0;
